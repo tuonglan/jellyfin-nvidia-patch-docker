@@ -1,12 +1,13 @@
-# nvidia-patch
+NVENC and NvFBC patches for Nvidia drivers
+==========================================
 
-![GitHub last commit](https://img.shields.io/github/last-commit/keylase/nvidia-patch.svg) ![Latest version](https://img.shields.io/badge/latest%20linux%20driver%20version-440.66.08-brightgreen.svg)
+![GitHub last commit](https://img.shields.io/github/last-commit/keylase/nvidia-patch.svg) ![Latest version](https://img.shields.io/badge/latest%20linux%20driver%20version-440.82-brightgreen.svg)
 
-This patch removes restriction on maximum number of simultaneous NVENC video encoding sessions imposed by Nvidia to consumer-grade GPUs.
+NVENC patch (`patch.sh`) removes restriction on maximum number of simultaneous NVENC video encoding sessions imposed by Nvidia to consumer-grade GPUs.
 
-Also there is available experimental NvFBC patch which allows to use NvFBC on consumer-grade GPUs. It should be applied same way as NVENC `patch.sh`, except you have to use `patch-fbc.sh` instead.
+NvFBC patch (`patch-fbc.sh`) allows to use NvFBC on consumer-grade GPUs. It should be applied same way as NVENC `patch.sh`, except you have to use `patch-fbc.sh` instead.
 
-Main target operating system is **GNU/Linux**, but for **Windows** support see [**win**](win).
+Main target operating system is **GNU/Linux**, but for **Windows** support see [**win** (clickable)](win).
 
 Requirements:
 - x86\_64 system architecture
@@ -43,6 +44,7 @@ Requirements:
 | 418.87.00 | :heavy_check_mark: | :x: | [Driver link](https://international.download.nvidia.com/tesla/418.87/NVIDIA-Linux-x86_64-418.87.00.run) |
 | 418.87.01 | :heavy_check_mark: | :x: | [Driver link](https://international.download.nvidia.com/tesla/418.87/NVIDIA-Linux-x86_64-418.87.01.run) |
 | 418.88 | :heavy_check_mark: | :x: | [Driver link](https://international.download.nvidia.com/XFree86/Linux-x86_64/418.88/NVIDIA-Linux-x86_64-418.88.run) |
+| 418.113 | :heavy_check_mark: | :x: | [Driver link](https://international.download.nvidia.com/XFree86/Linux-x86_64/418.113/NVIDIA-Linux-x86_64-418.113.run) |
 | 430.09 | :heavy_check_mark: | :x: | [Driver link](https://international.download.nvidia.com/XFree86/Linux-x86_64/430.09/NVIDIA-Linux-x86_64-430.09.run) |
 | 430.14 | :heavy_check_mark: | :x: | [Driver link](https://international.download.nvidia.com/XFree86/Linux-x86_64/430.14/NVIDIA-Linux-x86_64-430.14.run) |
 | 430.26 | :heavy_check_mark: | :x: | [Driver link](https://international.download.nvidia.com/XFree86/Linux-x86_64/430.26/NVIDIA-Linux-x86_64-430.26.run) |
@@ -69,6 +71,11 @@ Requirements:
 | 440.66.03 | :heavy_check_mark: | :heavy_check_mark: |  |
 | 440.66.04 | :heavy_check_mark: | :heavy_check_mark: |  |
 | 440.66.08 | :heavy_check_mark: | :heavy_check_mark: |  |
+| 440.66.09 | :heavy_check_mark: | :heavy_check_mark: |  |
+| 440.66.11 | :heavy_check_mark: | :heavy_check_mark: |  |
+| 440.66.12 | :heavy_check_mark: | :heavy_check_mark: |  |
+| 440.66.14 | :heavy_check_mark: | :heavy_check_mark: |  |
+| 440.82 | :heavy_check_mark: | :heavy_check_mark: | [Driver link](https://international.download.nvidia.com/XFree86/Linux-x86_64/440.82/NVIDIA-Linux-x86_64-440.82.run) |
 
 ## Synopsis
 
@@ -92,7 +99,7 @@ DESCRIPTION
 
 ## Step-by-Step guide
 
-Examples are provided for driver version 430.50. All commands executed as root.
+Examples are provided for driver version 430.50. All commands are executed as root.
 
 ### Download and install driver
 
